@@ -1,41 +1,43 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
-import xml2js from 'xml2js'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default async function Home() {
-  const data = await fetch(`https://moxie.foxnews.com/google-publisher/latest.xml`, {
-    cache: 'no-cache',
+  const response = await fetch(`https://philippine-news.p.rapidapi.com/latest?limit=15`, {
+    headers: {
+      'x-rapidapi-host': 'philippine-news.p.rapidapi.com',
+      'x-rapidapi-key': process.env.PHILIPPINES_NEWS_API_KEY
+    }
   })
-  const xml = await data.text()
-  const parser = new xml2js.Parser()
-  const result = await parser.parseStringPromise(xml)
-  console.log(result)
-  console.log(result.rss.channel[0].item[0])
+
+  const data = await response.json()
+  console.log(data)
 
   return (
     <main className={styles.main}>
       <div>
         <h1>Filipino News</h1>
         <ul>
-          {result.rss.channel[0].item.map((item, index) => {
-            const hasImage =
-              item.hasOwnProperty('media:content') && item['media:content'].length > 0
-            const imageUrl = hasImage ? item['media:content'][0].$.url : ''
-            return (
-              <li key={index}>
-                <h3 className={styles.title}>{item.title[0]}</h3>
-                <p className={styles.description}>{item.description[0]}</p>
-                <p className={styles.description}>{item.pubDate[0]}</p>
-                {hasImage && <Image src={imageUrl} alt='News Image' width={500} height={500} />}
-              </li>
-            )
-          })}
+          {data.map((item) => (
+            <li key={item.id}>
+            <h1 className={styles.title}>{item.title}</h1>
+            <p className={styles.description}>{item.description}</p>
+            <p className={styles.date}>{item.date}</p>
+            <p className={styles.source}>{item.source}</p>
+            <p className={styles.url}>{item.url}</p>
+            <Image
+               src={item.image}
+                alt={item.title}
+                width={500}
+                height={500}
+              />
+            </li>
+          ))}
         </ul>
       </div>
     </main>
-
   )
 }
+

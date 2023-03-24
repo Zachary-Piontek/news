@@ -105,3 +105,18 @@ a {
     color-scheme: dark;
   }
 }
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  background: rgb(var(--card-rgb));
+}
+
+.navbar ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+}

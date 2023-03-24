@@ -4,7 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['randomfox.ca', 'a57.foxnews.com'],
+    domains: ['randomfox.ca', 'a57.foxnews.com', 'sa.kapamilya.com', 'images.gmanews.tv', 'business.inquirer.net'],
   }
 }
 
