@@ -1,8 +1,14 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
+import { Newsreader } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+
+const newsFont = Newsreader({ 
+  subsets: ['latin'],
+  weight: ['400', '500', '700'], 
+})
 
 export default async function Home() {
   const response = await fetch(`https://google-news-api1.p.rapidapi.com/search?language=EN&q=philippines&sort=date%3Adesc&limit=20`, {
@@ -16,7 +22,7 @@ export default async function Home() {
   const data = await response.json()
 
   return (
-    <main className={styles.main}>
+    <main className={newsFont.className} >
       <div className={styles.div}>
         <h1>Filipino News</h1>
         <ul className={styles.newsContainer} >
