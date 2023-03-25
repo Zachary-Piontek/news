@@ -25,8 +25,8 @@ export default async function Home() {
               <a href={article.link} target="_blank" rel="noreferrer">
               <h2>{article.title}</h2>
               <p>{article.description}</p>
-              <p>{new Date(article.date).toLocaleString()}</p>
               <img className={styles.newsImages} src={article.props.image} alt={article.title} />
+              <p>{new Date(article.date).toLocaleString()}</p>
               </a>
               {/* <Image src={article.props.image} alt={article.title} width={300} height={300} /> need to figure out next.config domains */}
               </li>

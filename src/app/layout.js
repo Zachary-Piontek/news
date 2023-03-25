@@ -21,6 +21,9 @@ export default function RootLayout({ children }) {
         </ul>
       </nav>
       {children}
+      <footer>
+      <p>Powered by <a href="https://rapidapi.com/hub" target="_blank" rel="noreferrer">Google News API</a></p>
+      </footer>
       </body>
     </html>
   )

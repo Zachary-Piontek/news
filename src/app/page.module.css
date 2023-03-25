@@ -21,15 +21,24 @@
 
 .newsCards {
   display: grid;
-  justify-items: center;
-  justify-content: center;
-  align-content: center;
   grid-gap: 1rem;
   margin: 1rem;
   border: 5px solid white;
   border-radius: 5px;
   list-style: none;
+  background-color: whitesmoke;
+  color: black;
+  height: auto;
+  align-items: stretch;
 }
+
+.newsCards > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
 
 .newsCards img {
   width: 100%;
