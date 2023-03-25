@@ -4,8 +4,8 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['randomfox.ca', 'a57.foxnews.com', 'sa.kapamilya.com', 'images.gmanews.tv', 'business.inquirer.net'],
-  }
-}
+    domains: ['storage.googleapis.com', 'images.gmanews.tv', 'media.cnn.com', 'www.militarytimes.com'],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

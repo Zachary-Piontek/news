@@ -5,39 +5,34 @@ import styles from './page.module.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export default async function Home() {
-  const response = await fetch(`https://philippine-news.p.rapidapi.com/latest?limit=15`, {
+  const response = await fetch(`https://google-news-api1.p.rapidapi.com/search?language=EN&q=philippines&sort=date%3Adesc&limit=20`, {
     headers: {
-      'x-rapidapi-host': 'philippine-news.p.rapidapi.com',
-      'x-rapidapi-key': process.env.PHILIPPINES_NEWS_API_KEY
+      'X-RapidAPI-Host': 'google-news-api1.p.rapidapi.com',
+      'X-RapidAPI-Key': process.env.GOOGLE_NEWS_API_KEY,
     }
-  })
+   }
+  )
 
   const data = await response.json()
-  console.log(data)
 
   return (
     <main className={styles.main}>
-      <div>
+      <div className={styles.div}>
         <h1>Filipino News</h1>
-        <ul>
-          {data.map((item) => (
-            <li key={item.id}>
-            <h1 className={styles.title}>{item.title}</h1>
-            <p className={styles.description}>{item.description}</p>
-            <p className={styles.date}>{item.date}</p>
-            <p className={styles.source}>{item.source}</p>
-            <p className={styles.url}>{item.url}</p>
-            <Image
-               src={item.image}
-                alt={item.title}
-                width={500}
-                height={500}
-              />
-            </li>
+        <ul className={styles.newsContainer} >
+          {data.news.news.map((article, index) => (
+            <li key={index} className={styles.newsCards}>
+              <a href={article.link} target="_blank" rel="noreferrer">
+              <h2>{article.title}</h2>
+              <p>{article.description}</p>
+              <p>{new Date(article.date).toLocaleString()}</p>
+              <img className={styles.newsImages} src={article.props.image} alt={article.title} />
+              </a>
+              {/* <Image src={article.props.image} alt={article.title} width={300} height={300} /> need to figure out next.config domains */}
+              </li>
           ))}
         </ul>
       </div>
     </main>
   )
 }
-
