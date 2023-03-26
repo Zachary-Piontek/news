@@ -3,34 +3,26 @@
   justify-items: center;
 }
 
-.newsContainer {
+.rssfeeds {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
   grid-gap: 1rem;
-  margin: 1rem;
-  border: 1px solid white;
   list-style: none;
 }
 
-.newsCards {
+.rssfeeds ul {
   display: grid;
   grid-gap: 1rem;
-  margin: 1rem;
-  border: 5px solid white;
-  border-radius: 5px;
+}
+
+.rssfeeds li {
+  display: grid;
+  justify-content: center;
   list-style: none;
-  background-color: whitesmoke;
-  color: black;
-  align-items: stretch;
+  border: 1px solid whitesmoke;
 }
 
-.newsCards > * {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.newsCards img {
+.rssfeeds img {
   width: 100%;
+  height: 100%;
 }
