@@ -1,4 +1,6 @@
 import "./globals.css";
+import Image from "next/image";
+import NewsLogo from "./NewsLogo.png";
 
 export const metadata = {
   title: "Everything Philippines",
@@ -11,8 +13,8 @@ export default function RootLayout({ children }) {
       <body>
         <nav className="navbar">
           <ul>
-            <li>
-              <h1>Logo</h1>
+            <li className="logo">
+              <Image src={NewsLogo} alt="News Logo" width={50} height={50} />
             </li>
             <li>
               <a href="/">Home</a>

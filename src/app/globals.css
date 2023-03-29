@@ -128,10 +128,12 @@ a {
   display: grid;
   list-style: none;
   grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
   align-items: center;
 }
 
 .navbar ul li {
   display: grid;
+  text-align: left;
+  margin-left: 1rem;
 }
+

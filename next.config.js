@@ -19,6 +19,7 @@ const nextConfig = {
       "newsinfo.inquirer.net",
       "mb.com.ph",
       "pbs.twimg.com",
+      "www.inquirer.net",
     ],
   },
 };
