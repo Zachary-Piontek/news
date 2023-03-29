@@ -10,13 +10,15 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <nav className="navbar">
-          <h1>Logo</h1>
           <ul>
+            <li>
+              <h1>Logo</h1>
+            </li>
             <li>
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/about">About</a>
+              <a href="/sports">Sports</a>
             </li>
           </ul>
         </nav>

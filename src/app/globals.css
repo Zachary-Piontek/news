@@ -93,6 +93,15 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    background-color: #f7e7b6;
+    background-image: linear-gradient(
+      to bottom,
+      #fbf7ea 0%,
+      #fef5dd 33%,
+      #fdecd3 66%,
+      #feeed4 100%
+    );
+    padding-top: 1rem;
 }
 
 a {
@@ -108,15 +117,21 @@ a {
 
 .navbar {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  background: rgb(var(--card-rgb));
+  grid-template-columns: 1fr;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: brown;
 }
 
 .navbar ul {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   list-style: none;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.navbar ul li {
+  display: grid;
 }

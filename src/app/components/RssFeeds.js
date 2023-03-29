@@ -17,7 +17,7 @@ export default async function RssFeeds() {
 
   return (
     <div className={styles.rssfeeds}>
-      <ul>
+      <ul className={styles.newspaperPage}>
         {rssCombinedJson.rss.channel[0].item.map((item, index) => {
           const mediaContent =
             item["media:content"] && item["media:content"][0];
