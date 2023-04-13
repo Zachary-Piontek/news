@@ -22,6 +22,12 @@ export default function RootLayout({ children }) {
             <li>
               <a href="/sports">Sports</a>
             </li>
+            <li>
+              <a href="/business">Business</a>
+            </li>
+            <li>
+              <a href="/lifestyle">Lifestyle</a>
+            </li>
           </ul>
         </nav>
         {children}

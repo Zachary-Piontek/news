@@ -20,6 +20,7 @@ const nextConfig = {
       "mb.com.ph",
       "pbs.twimg.com",
       "www.inquirer.net",
+      "bandera.inquirer.net",
     ],
   },
 };

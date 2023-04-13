@@ -127,7 +127,7 @@ a {
 .navbar ul {
   display: grid;
   list-style: none;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   align-items: center;
 }
 

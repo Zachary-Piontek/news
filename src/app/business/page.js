@@ -10,7 +10,7 @@ const newsFont = Carter_One({
 
 export default async function SportsFeed() {
   const rssCombined = await fetch(
-    "https://rss.app/feeds/kJZXUQf66Ju4PjMr.xml",
+    "https://rss.app/feeds/Q84S6IwUfEsgXhz3.xml",
     {
       cache: "no-cache",
     }
@@ -23,7 +23,7 @@ export default async function SportsFeed() {
   return (
     <div className={styles.div}>
       <div className={styles.rssfeeds}>
-        <h2 className={`${newsFont.className} ${styles.newsFont}`}>Sports</h2>
+        <h2 className={`${newsFont.className} ${styles.newsFont}`}>Business</h2>
         <ul className={styles.newspaperPage}>
           {rssCombinedJson.rss.channel[0].item.map((item, index) => {
             const mediaContent =

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default async function RssFeeds() {
   const rssCombined = await fetch(
-    "https://rss.app/feeds/T61HF2pMGG8V0ReH.xml",
+    "https://rss.app/feeds/nvpfkbTLLbuB4833.xml",
     {
       cache: "no-cache",
     }

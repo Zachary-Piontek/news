@@ -2,15 +2,13 @@
   display: grid;
   justify-items: center;
   margin: 1rem;
-  margin-top: 3rem;
+  margin-top: 2.5rem;
 }
 
 .rssfeeds {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 1rem;
   list-style: none;
-  margin-top: 1rem;
 }
 
 .rssfeeds ul {
@@ -26,7 +24,7 @@
   justify-content: center;
   justify-items: center;
   list-style: none;
-  border: 1px solid black;
+  border: 0.5rem solid black;
   color: black;
 }
 
@@ -38,6 +36,11 @@
 .rssfeeds li img {
   width: 100%;
   height: 100%;
+}
+
+.rssfeeds h2 {
+  display: grid;
+  justify-content: center;
 }
 
 /* For screens smaller than 1000px */
