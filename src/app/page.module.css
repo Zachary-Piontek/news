@@ -2,7 +2,7 @@
   display: grid;
   justify-items: center;
   margin: 1rem;
-  margin-top: 2.5rem;
+  margin-top: 5rem;
 }
 
 .rssfeeds {
@@ -27,6 +27,8 @@
   border: 0.5rem solid black;
   color: black;
   max-width: 100%;
+  border-radius: 0.5rem;
+  background-color: rgb(255, 234, 206);
 }
 
 .newsFont {
@@ -58,3 +60,10 @@
     grid-template-columns: repeat(auto-fit, minmax(1fr));
   }
 }
+
+@media screen and (max-width: 600px) {
+  .div {
+    margin-top: 3rem;
+  }
+}
+  

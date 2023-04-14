@@ -14,9 +14,6 @@ export default async function Home() {
   return (
     <main>
       <div className={styles.div}>
-        <h1 className={`${newsFont.className} ${styles.newsFont}`}>
-          The Philippine Sun
-        </h1>
         <RSSFeed />
       </div>
     </main>

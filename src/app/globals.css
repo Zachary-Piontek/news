@@ -99,13 +99,15 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-    background-color: #f7e7b6;
+    background-color: rgb(206, 17, 38);
     background-image: linear-gradient(
       to bottom,
-      #fbf7ea 0%,
-      #fef5dd 33%,
-      #fdecd3 66%,
-      #feeed4 100%
+      rgb(255, 224, 228) 0%,
+      rgb(251, 117, 133) 20%,
+      rgb(255, 224, 228) 40%,
+      rgb(251, 117, 133) 60%,
+      rgb(255, 224, 228) 80%,
+      rgb(251, 117, 133) 100%
     );
     padding-top: 1rem;
 }
@@ -123,15 +125,31 @@ a {
 
 .navbar {
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  justify-content: space-between;
-  justify-items: flex-end;
-  padding-right: 0.5rem;
+  grid-template-rows: 1fr;
+  justify-content: center;
   align-items: center;
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: brown;
+  background-color: rgb(0, 56, 168);
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  width: 100%;
+  justify-items: center;
+  background-color: rgb(0, 56, 168);
+  color: rgb(252, 209, 22);
+  font-size: 1.5rem;
+  border-bottom: 3px solid rgb(252, 209, 22);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
 }
 
 .navbar ul li {
@@ -172,12 +190,18 @@ a {
   display: grid;
   justify-content: center;
   align-items: center;
-  background-color: blue;
-  border: 5px solid brown;
+  background-color: rgb(0, 56, 168);
+  border: 5px solid rgb(206, 17, 38);
 }
 
 .open .menu-list {
-  display: block; /* show the menu when .open class is added */
+  position: absolute;
+  display: block;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  transition: all 0.2s ease;
 }
 
 @media (min-width: 601px) {
@@ -203,6 +227,14 @@ a {
 }
 
 @media (max-width: 600px) {
+  .navbar {
+    justify-items: flex-end;
+  }
+
+  .logo {
+    grid-template-columns: 4fr 1fr;
+    font-size: 1rem;
+  }
   .menu-toggle {
     display: block;
       background: none;
@@ -212,12 +244,4 @@ a {
     }
   }
 
-  .open .menu-list {
-    position: absolute;
-    display: block;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    transition: all 0.2s ease;
-  }
+
