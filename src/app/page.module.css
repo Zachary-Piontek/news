@@ -26,6 +26,7 @@
   list-style: none;
   border: 0.5rem solid black;
   color: black;
+  max-width: 100%;
 }
 
 .newsFont {

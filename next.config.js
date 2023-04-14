@@ -21,6 +21,7 @@ const nextConfig = {
       "pbs.twimg.com",
       "www.inquirer.net",
       "bandera.inquirer.net",
+      "cebudailynews.inquirer.net",
     ],
   },
 };

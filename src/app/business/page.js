@@ -34,7 +34,7 @@ export default async function SportsFeed() {
               .replace(/<[^>]*>?/gm, "");
             return (
               <li key={index}>
-                <p className="title">{item.title}</p>
+                <h3 className="title">{item.title}</h3>
                 <p className="description">{description}</p>
                 {mediaContent && (
                   <Image
