@@ -22,6 +22,13 @@ const nextConfig = {
       "www.inquirer.net",
       "bandera.inquirer.net",
       "cebudailynews.inquirer.net",
+      "www.sunstar.com.ph",
+      "crisis24.garda.com",
+      "files01.pna.gov.ph",
+      "www.rappler.com",
+      "www.manilatimes.net",
+      "www.airlineratings.com",
+      "visayandailystar.com",
     ],
   },
 };

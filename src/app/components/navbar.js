@@ -31,6 +31,9 @@ export default function Navbar() {
         <li>
           <a href="/lifestyle">Lifestyle</a>
         </li>
+        <li>
+          <a href="/visayas">Visayas</a>
+        </li>
       </ul>
       <button className="menu-toggle" onClick={toggleMenu}>
         <Image src={Hamburger} alt="Hamburger Menu" width={40} height={40} />
