@@ -73,10 +73,16 @@
   }
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scrollbar-width: none;
+
 }
 
 html,
@@ -93,6 +99,15 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    background-color: #f7e7b6;
+    background-image: linear-gradient(
+      to bottom,
+      #fbf7ea 0%,
+      #fef5dd 33%,
+      #fdecd3 66%,
+      #feeed4 100%
+    );
+    padding-top: 1rem;
 }
 
 a {
@@ -105,3 +120,104 @@ a {
     color-scheme: dark;
   }
 }
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  justify-content: space-between;
+  justify-items: flex-end;
+  padding-right: 0.5rem;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: brown;
+}
+
+.navbar ul li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.menu-toggle {
+  display: block;
+  cursor: pointer;
+}
+
+.icon-bar:nth-child(2) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon-bar:last-child {
+  top: auto;
+  bottom: 50%;
+}
+
+.menu-list {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  transition: all 0.2s ease;
+  display: none; /* hide the menu initially */
+  font-size: 1.5rem;
+}
+
+.open {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  border: 5px solid brown;
+}
+
+.open .menu-list {
+  display: block; /* show the menu when .open class is added */
+}
+
+@media (min-width: 601px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: static;
+    width: auto;
+    background-color: transparent;
+    transition: none;
+  }
+
+  .menu-list li {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .open .menu-list {
+    position: absolute;
+    display: block;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    transition: all 0.2s ease;
+  }
