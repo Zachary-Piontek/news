@@ -16,7 +16,13 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo">
-        <Image src={NewsLogo} alt="News Logo" width={50} height={50} />
+        <div className="header">
+          <Image src={NewsLogo} alt="News Logo" width={60} height={60} />
+          <h1>The Philippine Sun</h1>
+        </div>
+        <button className="menu-toggle" onClick={toggleMenu}>
+          <Image src={Hamburger} alt="Hamburger Menu" width={40} height={40} />
+        </button>
       </div>
       <ul className={`menu-list ${isOpen ? "open" : ""}`}>
         <li>
@@ -35,9 +41,6 @@ export default function Navbar() {
           <a href="/visayas">Visayas</a>
         </li>
       </ul>
-      <button className="menu-toggle" onClick={toggleMenu}>
-        <Image src={Hamburger} alt="Hamburger Menu" width={40} height={40} />
-      </button>
     </nav>
   );
 }

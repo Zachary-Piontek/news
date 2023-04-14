@@ -29,6 +29,10 @@ const nextConfig = {
       "www.manilatimes.net",
       "www.airlineratings.com",
       "visayandailystar.com",
+      "static.zawya.com",
+      "sa.kapamilya.com",
+      "airlive.net",
+      "now.humboldt.edu",
     ],
   },
 };

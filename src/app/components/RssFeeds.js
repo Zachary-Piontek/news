@@ -1,10 +1,16 @@
 import xml2js from "xml2js";
 import styles from "../page.module.css";
 import Image from "next/image";
+import { Carter_One } from "next/font/google";
+
+const newsFont = Carter_One({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 export default async function RssFeeds() {
   const rssCombined = await fetch(
-    "https://rss.app/feeds/nvpfkbTLLbuB4833.xml",
+    "https://rss.app/feeds/_TFNX9XxeDhglPDkS.xml",
     {
       cache: "no-cache",
     }
@@ -12,10 +18,11 @@ export default async function RssFeeds() {
   const rssCombinedText = await rssCombined.text();
   const rssCombinedJson = await xml2js.parseStringPromise(rssCombinedText);
 
-  console.log(rssCombinedJson.rss.channel[0].item);
-
   return (
     <div className={styles.rssfeeds}>
+      <h2 className={`${newsFont.className} ${styles.newsFont}`}>
+        Top Headlines
+      </h2>
       <ul className={styles.newspaperPage}>
         {rssCombinedJson.rss.channel[0].item.map((item, index) => {
           const mediaContent =
