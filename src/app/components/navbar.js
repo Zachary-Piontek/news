@@ -40,6 +40,9 @@ export default function Navbar() {
         <li>
           <a href="/visayas">Visayas</a>
         </li>
+        <li>
+          <a href="/cebu">Cebu</a>
+        </li>
       </ul>
     </nav>
   );
