@@ -102,12 +102,12 @@ body {
     background-color: rgb(206, 17, 38);
     background-image: linear-gradient(
       to bottom,
-      rgb(255, 224, 228) 0%,
+      rgb(255, 251, 209) 0%,
       rgb(251, 117, 133) 20%,
       rgb(255, 224, 228) 40%,
-      rgb(251, 117, 133) 60%,
+      rgb(161, 188, 255) 60%,
       rgb(255, 224, 228) 80%,
-      rgb(251, 117, 133) 100%
+      rgb(255, 245, 179) 100%
     );
     padding-top: 1rem;
 }
@@ -190,6 +190,7 @@ a {
   display: grid;
   justify-content: center;
   align-items: center;
+  font-size: 2rem;
   background-color: rgb(0, 56, 168);
   border: 5px solid rgb(206, 17, 38);
 }
@@ -200,7 +201,6 @@ a {
   top: 60px;
   left: 0;
   width: 100%;
-  background-color: black;
   transition: all 0.2s ease;
 }
 
@@ -211,7 +211,7 @@ a {
 
   .menu-list {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     list-style: none;
     margin: 0;
     padding: 0;
@@ -241,6 +241,13 @@ a {
       border: none;
       padding: 0;
       margin: 0;
+    }
+
+    .navbar ul li {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      margin-left: 1rem;
     }
   }
 
