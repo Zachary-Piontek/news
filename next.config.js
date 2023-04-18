@@ -33,6 +33,10 @@ const nextConfig = {
       "sa.kapamilya.com",
       "airlive.net",
       "now.humboldt.edu",
+      "manilastandard.net",
+      "pageone.ph",
+      "powerphilippines.com",
+      "www.traveldailynews.asia",
     ],
   },
 };
