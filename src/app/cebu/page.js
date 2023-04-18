@@ -40,8 +40,8 @@ export default async function SportsFeed() {
                   <Image
                     src={mediaContent.$.url}
                     alt={item.title}
-                    width={200}
-                    height={200}
+                    width={400}
+                    height={400}
                   />
                 )}
                 <a href={item.link}>Read More</a>
