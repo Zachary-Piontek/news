@@ -43,6 +43,9 @@ export default function Navbar() {
         <li>
           <a href="/cebu">Cebu</a>
         </li>
+        <li>
+          <a href="/danao">Danao City</a>
+        </li>
       </ul>
     </nav>
   );
