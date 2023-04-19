@@ -57,6 +57,9 @@
   .rssfeeds li {
     grid-template-columns: repeat(auto-fit, minmax(1fr));
   }
+  .div {
+    margin-top: 3rem;
+  }
 }
 
 /* For screens larger than 1000px */

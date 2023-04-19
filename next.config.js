@@ -37,6 +37,7 @@ const nextConfig = {
       "pageone.ph",
       "powerphilippines.com",
       "www.traveldailynews.asia",
+      "cdn4.premiumread.com",
     ],
   },
 };
