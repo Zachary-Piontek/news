@@ -38,6 +38,13 @@ const nextConfig = {
       "powerphilippines.com",
       "www.traveldailynews.asia",
       "cdn4.premiumread.com",
+      "www.mobileworldlive.com",
+      "ptvnews.ph",
+      "files.tempo.com.ph",
+      "malaya.com.ph",
+      "bloximages.chicago2.vip.townnews.com",
+      "www.petfoodindustry.com",
+      "tiebreakertimes.com.ph",
     ],
   },
 };
