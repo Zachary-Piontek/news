@@ -148,8 +148,10 @@ a {
 
 .header {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
   align-items: center;
+  justify-content: center;
+  grid-gap: 1rem;
 }
 
 .navbar ul li {
@@ -206,6 +208,17 @@ a {
   font-size: 1.5rem;
 }
 
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.weather-info p {
+  font-size: 1rem;
+  text-align: center;
+}
+
 @media (min-width: 1001px) {
   .menu-toggle {
     display: none;
@@ -226,6 +239,13 @@ a {
   .menu-list li {
     margin: 0 10px;
   }
+
+  .weather-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
 }
 
 @media (max-width: 1000px) {
@@ -234,7 +254,7 @@ a {
   }
 
   .logo {
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 6fr 1fr;
     font-size: 1rem;
   }
   .menu-toggle {
@@ -250,6 +270,19 @@ a {
       grid-template-columns: 1fr;
       align-items: center;
       margin-left: 1rem;
+    }
+
+    .weather-info {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  
+    .weather-info > div:not(:last-child) {
+      display: none;
+    }
+  
+    input {
+      width: 100%;
     }
   }
 
