@@ -37,6 +37,7 @@ export default async function RssFeeds() {
               <p className="description">{description}</p>
               {mediaContent && (
                 <Image
+                  className={styles.newsImage}
                   src={mediaContent.$.url}
                   alt={item.title}
                   width={400}
