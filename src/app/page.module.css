@@ -52,6 +52,10 @@
   justify-content: center;
 }
 
+.newspaperPage img {
+  border: solid 0.1rem black;
+}
+
 /* For screens smaller than 1000px */
 @media (max-width: 1000px) {
   .rssfeeds li {
@@ -69,8 +73,12 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .div {
-    margin-top: 3rem;
+    margin-top: 4rem;
+  }
+  .rssfeeds li {
+    margin: 1rem;
   }
 }
+  
